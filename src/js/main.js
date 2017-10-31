@@ -1,8 +1,11 @@
 /*! functions.js */
 var $ = require('jquery');
-$.fn.slider = require('ui/slider.js');
-var test = require('./components/test.js');
-console.log(test);
+//$.fn.slider = require('ui/slider.js');
+$('#btn').on('click',function(){
+  require.ensure([], function() {
+    require('./components/test.js')
+  });
+});
 // $(window).load(function() {
 //   var slider = $('.banner').slider({
 //     dots: true,
